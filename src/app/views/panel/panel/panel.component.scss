@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: #c5cae9;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  background-color: #32396e;
+  color: white;
+  padding: 0 1rem;
+}
+
+.active {
+  color: #90caf9;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+  list-style: none;
+  gap: 1rem;
+
+  li {
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}

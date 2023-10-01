@@ -1,0 +1,13 @@
+<div class="form-wrapper">
+  <h2 class="title">Sing In</h2>
+
+  <form class="signin-form" [formGroup]="form" (ngSubmit)="submit()">
+    <input type="text" placeholder="Username" formControlName="username" />
+
+    <input type="password" placeholder="Password" formControlName="password" />
+
+    <input type="submit" value="Sign up" [disabled]="form.invalid" />
+  </form>
+
+  <a routerLink="/auth/signup">singup</a>
+</div>

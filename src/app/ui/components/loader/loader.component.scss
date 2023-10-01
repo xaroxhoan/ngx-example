@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.layout {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #424242e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
