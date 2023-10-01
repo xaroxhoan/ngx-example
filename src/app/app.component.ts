@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LoaderComponent } from './ui/components/loader/loader.component';
+import { LoaderComponent } from './lib/ui/components/loader/loader.component';
 import { AppStore } from './core/store/app.store';
 
 @Component({

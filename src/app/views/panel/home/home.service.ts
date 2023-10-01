@@ -1,12 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CoreModule } from '../core.module';
 import { of } from 'rxjs';
 import { HomeResolved } from 'src/app/views/panel/types/home';
 
-@Injectable({
-  providedIn: CoreModule,
-})
+@Injectable()
 export class HomeService {
   constructor(private http: HttpClient) {}
 

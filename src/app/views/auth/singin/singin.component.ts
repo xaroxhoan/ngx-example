@@ -9,8 +9,8 @@ import {
 } from '@angular/forms';
 import { ISinginForm } from '../types/singin.types';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from 'src/app/core/http/auth.service';
 import { AuthStore } from 'src/app/core/store/auth.store';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-singin',

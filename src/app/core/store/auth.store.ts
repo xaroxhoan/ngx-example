@@ -6,6 +6,7 @@ import { ISignin } from 'src/app/views/auth/types/singin.types';
 
 export interface IAuthState {
   isLoggedIn: boolean;
+  token?: string;
   userInfo?: ISignin;
 }
 
@@ -22,6 +23,8 @@ export class AuthStore extends ComponentStore<IAuthState> {
   }
 
   readonly isLoggedIn$: Observable<boolean> = this.select((x) => x.isLoggedIn);
+
+  readonly token$: Observable<string | undefined> = this.select((x) => x.token);
 
   readonly userInfo$: Observable<ISignin | undefined> = this.select(
     (x) => x.userInfo

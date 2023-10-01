@@ -5,9 +5,9 @@ import {
 } from '@angular/router';
 import { IHomeResolved } from '../types/home';
 import { delay, of, tap } from 'rxjs';
-import { HomeService } from 'src/app/core/http/home.service';
 import { inject } from '@angular/core';
 import { AppStore } from 'src/app/core/store/app.store';
+import { HomeService } from './home.service';
 
 export const homeResolver: ResolveFn<IHomeResolved> = (
   routes: ActivatedRouteSnapshot,

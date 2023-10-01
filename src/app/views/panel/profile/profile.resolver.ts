@@ -5,9 +5,9 @@ import {
 } from '@angular/router';
 import { IProfileResolved } from '../types/profile';
 import { delay, tap } from 'rxjs';
-import { ProfileService } from 'src/app/core/http/profile.service';
 import { inject } from '@angular/core';
 import { AppStore } from 'src/app/core/store/app.store';
+import { ProfileService } from './profile.service';
 
 export const profileResolver: ResolveFn<IProfileResolved> = (
   routes: ActivatedRouteSnapshot,
