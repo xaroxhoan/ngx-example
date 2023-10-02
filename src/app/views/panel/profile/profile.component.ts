@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileResolved } from '../types/profile';
 import { ProfileService } from './profile.service';
-import { AppStore } from 'src/app/core/store/app.store';
-import { Observable, delay, map, tap } from 'rxjs';
+import { AppStore } from '@core';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-profile',

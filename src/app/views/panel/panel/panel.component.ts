@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { AuthStore } from 'src/app/core/store/auth.store';
+import { AuthStore } from '@core';
 
 @Component({
   selector: 'app-panel',

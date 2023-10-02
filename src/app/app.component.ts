@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LoaderComponent } from './lib/ui/components/loader/loader.component';
-import { AppStore } from './core/store/app.store';
+import { LoaderComponent } from '@lib';
+import { AppStore } from '@core';
 
 @Component({
   selector: 'app-root',

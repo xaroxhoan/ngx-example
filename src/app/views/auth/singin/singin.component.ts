@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { ISinginForm } from '../types/singin.types';
 import { Router, RouterLink } from '@angular/router';
-import { AuthStore } from 'src/app/core/store/auth.store';
+import { AuthStore } from '@core';
 import { AuthService } from '../auth.service';
 
 @Component({
