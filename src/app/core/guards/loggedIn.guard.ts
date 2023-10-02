@@ -6,7 +6,7 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 import { map, tap } from 'rxjs';
-import { AuthStore } from 'src/app/core/store/auth.store';
+import { AuthStore } from '@core';
 
 export const loggedInGuard: CanActivateFn = (
   route: ActivatedRouteSnapshot,

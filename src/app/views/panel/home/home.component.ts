@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeResolved } from '../types/home';
 import { HomeService } from './home.service';
-import { Observable, delay, map, tap } from 'rxjs';
-import { AppStore } from 'src/app/core/store/app.store';
+import { Observable, map } from 'rxjs';
+import { AppStore } from '@core';
 
 @Component({
   selector: 'app-home',
