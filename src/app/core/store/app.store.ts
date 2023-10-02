@@ -2,11 +2,7 @@ import { Injectable } from '@angular/core';
 import { CoreModule } from '../core.module';
 import { ComponentStore } from '@ngrx/component-store';
 import { Observable } from 'rxjs';
-
-export interface IAppState {
-  loading: boolean;
-  theme?: 'dark' | 'light';
-}
+import { IAppState } from '../interfaces';
 
 const intialState: IAppState = {
   loading: false,
