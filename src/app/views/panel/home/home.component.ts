@@ -1,6 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IHomeResolved } from '../types/home';
+import { HomeResolved } from '../types/home';
+import { HomeService } from './home.service';
+import { Observable, delay, map, tap } from 'rxjs';
+import { AppStore } from 'src/app/core/store/app.store';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +13,10 @@ import { IHomeResolved } from '../types/home';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  title!: string;
+  private readonly api: HomeService = inject(HomeService);
+  private readonly appStore: AppStore = inject(AppStore);
 
-  @Input('data') set data(value: IHomeResolved) {
-    this.title = value?.title;
-  }
+  info$: Observable<HomeResolved> = this.api.info().pipe();
+
+  title$: Observable<string> = this.info$.pipe(map((x) => x.title));
 }

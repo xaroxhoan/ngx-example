@@ -1,6 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IProfileResolved } from '../types/profile';
+import { ProfileResolved } from '../types/profile';
+import { ProfileService } from './profile.service';
+import { AppStore } from 'src/app/core/store/app.store';
+import { Observable, delay, map, tap } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -10,9 +13,10 @@ import { IProfileResolved } from '../types/profile';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
-  title!: string;
+  private readonly api: ProfileService = inject(ProfileService);
+  private readonly appStore: AppStore = inject(AppStore);
 
-  @Input('data') set initialState(value: IProfileResolved) {
-    this.title = value?.title;
-  }
+  info$: Observable<ProfileResolved> = this.api.info().pipe();
+
+  title$: Observable<string> = this.info$.pipe(map((x) => x.title));
 }
