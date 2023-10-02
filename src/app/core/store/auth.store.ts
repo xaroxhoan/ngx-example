@@ -2,13 +2,7 @@ import { Injectable } from '@angular/core';
 import { ComponentStore } from '@ngrx/component-store';
 import { CoreModule } from '../core.module';
 import { Observable, tap } from 'rxjs';
-import { ISignin } from 'src/app/views/auth/types/singin.types';
-
-export interface IAuthState {
-  isLoggedIn: boolean;
-  token?: string;
-  userInfo?: ISignin;
-}
+import { IAuthState, ISignIn } from '../interfaces';
 
 const intialState: IAuthState = {
   isLoggedIn: false,
@@ -26,7 +20,7 @@ export class AuthStore extends ComponentStore<IAuthState> {
 
   readonly token$: Observable<string | undefined> = this.select((x) => x.token);
 
-  readonly userInfo$: Observable<ISignin | undefined> = this.select(
+  readonly userInfo$: Observable<ISignIn | undefined> = this.select(
     (x) => x.userInfo
   ).pipe(tap((x) => console.log('user info:', x)));
 

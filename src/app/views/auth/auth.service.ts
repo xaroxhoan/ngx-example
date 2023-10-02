@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { ISignin } from 'src/app/views/auth/types/singin.types';
+import { ISignIn } from '@core';
 
 @Injectable()
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  singin(props: ISignin) {
+  singin(props: ISignIn) {
     return of(props);
   }
 
